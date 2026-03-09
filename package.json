@@ -1,0 +1,25 @@
+{
+  "name": "extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "@trimble-oss/moduswebcomponents-react": "^1.1.0-react19",
+    "@vitejs/plugin-react": "^5.1.4",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lucide-react": "^0.577.0",
+    "trimble-connect-workspace-api": "^0.3.34"
+  }
+}

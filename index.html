@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trimble Agent IA Extension</title>
+    <!-- OBLIGATOIRE : Workspace API SDK -->
+    <script src="https://components.connect.trimble.com/trimble-connect-workspace-api/index.js"></script>
+    <!-- RECOMMANDÉ : Extension API legacy (compatibilité) -->
+    <script src="https://app.connect.trimble.com/tc/static/5.0.0/tcw-extension-api.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
