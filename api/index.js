@@ -7,7 +7,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',      // dev local (Vite)
     'http://localhost:3000',      // dev local
-    // Ajouter les origines autorisées (ex: Vercel, Github Pages)
+    'https://trimble-agent-extension.vercel.app', // Vercel
+    'https://trimble-agent-extension-fdxeh4iox-simon-martin-9107s-projects.vercel.app'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

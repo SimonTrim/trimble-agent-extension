@@ -190,7 +190,8 @@ function AgentChat() {
                   }
                 };
 
-                const res = await fetch(`http://localhost:3001/api/projects/${project.id}/bcf/topics`, {
+                const backendUrl = import.meta.env.PROD ? 'https://trimble-agent-extension.vercel.app' : 'http://localhost:3001';
+                const res = await fetch(`${backendUrl}/api/projects/${project.id}/bcf/topics`, {
                   method: 'POST',
                   headers: {
                     'Authorization': `Bearer ${token}`,
@@ -230,7 +231,8 @@ function AgentChat() {
               }
 
               try {
-                const res = await fetch(`http://localhost:3001/api/projects/${project.id}/bcf/topics`, {
+                const backendUrl = import.meta.env.PROD ? 'https://trimble-agent-extension.vercel.app' : 'http://localhost:3001';
+                const res = await fetch(`${backendUrl}/api/projects/${project.id}/bcf/topics`, {
                   headers: {
                     'Authorization': `Bearer ${token}`,
                     'X-Project-Region': project.location
@@ -267,7 +269,8 @@ function AgentChat() {
               }
 
               try {
-                const res = await fetch(`http://localhost:3001/api/projects/${project.id}/bcf/topics/${args.topic_id}`, {
+                const backendUrl = import.meta.env.PROD ? 'https://trimble-agent-extension.vercel.app' : 'http://localhost:3001';
+                const res = await fetch(`${backendUrl}/api/projects/${project.id}/bcf/topics/${args.topic_id}`, {
                   method: 'PUT',
                   headers: {
                     'Authorization': `Bearer ${token}`,
