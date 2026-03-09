@@ -5,15 +5,19 @@ export const CHAT_UI_URLS = {
   prod: 'https://assist.ai.trimble.com',
 };
 
-export enum ContentVariants {
-  Chat = 0,
-  AgentCards = 1,
-}
+export const ContentVariants = {
+  Chat: 0,
+  AgentCards: 1,
+} as const;
 
-export enum ChatUiVariants {
-  Full = 'full',
-  Compact = 'compact',
-}
+export type ContentVariants = typeof ContentVariants[keyof typeof ContentVariants];
+
+export const ChatUiVariants = {
+  Full: 'full',
+  Compact: 'compact',
+} as const;
+
+export type ChatUiVariants = typeof ChatUiVariants[keyof typeof ChatUiVariants];
 
 export interface ChatInputButton {
   id: string;

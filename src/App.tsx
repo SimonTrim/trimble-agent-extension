@@ -21,7 +21,7 @@ function AgentChat() {
   useEffect(() => {
     if (!iframeRef.current || !isConnected) return;
 
-    const environment = 'stage'; // ou 'prod' selon l'environnement
+    const environment = 'stage' as const; // ou 'prod' selon l'environnement
     const chatUiUrl = CHAT_UI_URLS[environment];
 
     const getConfig = () => ({
