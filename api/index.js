@@ -52,9 +52,9 @@ function getTcApiUrl(region) {
   return `https://${host}/tc/api/2.0`;
 }
 
-app.all('/api/tc/*', requireAuth, async (req, res) => {
+app.all('/api/tc/*path', requireAuth, async (req, res) => {
   try {
-    const tcPath = req.params[0];
+    const tcPath = req.params.path;
     const baseUrl = getTcApiUrl(req.region);
     const targetUrl = new URL(`${baseUrl}/${tcPath}`);
 
