@@ -1,4 +1,5 @@
 {
+  "installCommand": "node scripts/prepare-npmrc.cjs && npm install",
   "rewrites": [
     {
       "source": "/api/(.*)",
