@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="assistBlue" x1="10" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="0.55" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="assistPurple" x1="14" y1="9" x2="53" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#0EA5E9" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#A855F7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <g filter="url(#softGlow)">
+    <path d="M17 14.5C17 12.7 18.93 11.55 20.52 12.42L47.23 27.04C49.06 28.04 49.06 30.68 47.23 31.68L20.52 46.3C18.93 47.17 17 46.02 17 44.22V14.5Z" fill="white"/>
+    <path d="M23.5 19.65L43.62 30.36L23.5 41.07V19.65Z" fill="url(#assistPurple)"/>
+    <circle cx="17.5" cy="13.5" r="6.5" fill="url(#assistBlue)" stroke="white" stroke-width="3"/>
+    <circle cx="17.5" cy="45.5" r="6.5" fill="url(#assistBlue)" stroke="white" stroke-width="3"/>
+    <circle cx="48" cy="30.5" r="5.2" fill="url(#assistBlue)" stroke="white" stroke-width="2.6"/>
+  </g>
+</svg>
