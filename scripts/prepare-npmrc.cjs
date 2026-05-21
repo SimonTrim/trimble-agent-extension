@@ -1,11 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 
-const source = path.join(process.cwd(), "npmrc.vercel");
 const target = path.join(process.cwd(), ".npmrc");
+const token = process.env.TRIMBLE_ARTIFACTORY_TOKEN?.trim();
 
-if (!process.env.TRIMBLE_ARTIFACTORY_TOKEN) {
+if (!token) {
   throw new Error("TRIMBLE_ARTIFACTORY_TOKEN is required to install Trimble Agent Studio packages.");
 }
 
-fs.copyFileSync(source, target);
+fs.writeFileSync(
+  target,
+  [
+    "registry=https://registry.npmjs.org/",
+    "",
+    "@trimble-agentic-external-npm-local:registry=https://artifactory.trimble.tools/artifactory/api/npm/trimble-agentic-external-npm-local/",
+    `//artifactory.trimble.tools/artifactory/api/npm/trimble-agentic-external-npm-local/:_authToken=${token}`,
+    "",
+  ].join("\n")
+);

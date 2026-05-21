@@ -1,5 +1,0 @@
-registry=https://registry.npmjs.org/
-
-@trimble-agentic-external-npm-local:registry=https://artifactory.trimble.tools/artifactory/api/npm/trimble-agentic-external-npm-local/
-//artifactory.trimble.tools/artifactory/api/npm/trimble-agentic-external-npm-local/:_authToken=${TRIMBLE_ARTIFACTORY_TOKEN}
-always-auth=true
